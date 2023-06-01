@@ -19,8 +19,8 @@ export const EmployeeForm = () => {
         Get animal state and location state on initialization.
     */
     useEffect(() => {
-       getAnimals().then(animalsData => setAnimals(animalsData))
-       getLocations().then(locationsData => setLocations(locationsData))
+        getAnimals().then(animalsData => setAnimals(animalsData))
+        getLocations().then(locationsData => setLocations(locationsData))
     }, [])
 
     const constructNewEmployee = () => {
@@ -41,7 +41,7 @@ export const EmployeeForm = () => {
                 locationId,
                 animalId
             })
-            .then(() => history.push("/employees"))
+                .then(() => history.push("/employees"))
         }
     }
 

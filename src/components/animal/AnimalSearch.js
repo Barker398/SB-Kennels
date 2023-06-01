@@ -1,6 +1,6 @@
 import React from "react"
 
-export const AnimalSearch = ({searchTerms, onSearchTermChange}) => {
+export const AnimalSearch = ({ searchTerms, onSearchTermChange }) => {
 
     return (
         <>
