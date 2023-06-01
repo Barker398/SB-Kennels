@@ -4,15 +4,15 @@ import { getEmployees } from "./EmployeeManager"
 import "./Employees.css"
 
 export const EmployeeList = () => {
-    const [ employees, setEmployees ] = useState([])
+    const [employees, setEmployees] = useState([])
     const history = useHistory()
-    
+
     useEffect(() => {
         getEmployees().then(employeesData => setEmployees(employeesData))
     }, [])
 
     return (
-        <div style={{ margin: "0rem 3rem"}}>
+        <div style={{ margin: "0rem 3rem" }}>
             <h1>Employees</h1>
 
             <button onClick={() => history.push("/employees/create")}>
