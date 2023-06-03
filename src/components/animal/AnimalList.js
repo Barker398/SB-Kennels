@@ -7,12 +7,12 @@ import { AnimalSearch } from "./AnimalSearch"
 
 export const AnimalList = () => {
 
-    const [ animals, setAnimals ] = useState([])
-    const [ searchTerm, setSearchTerm ] = useState('')
+    const [animals, setAnimals] = useState([])
+    const [searchTerm, setSearchTerm] = useState('')
     const history = useHistory()
 
     // Initialization effect hook -> Go get animal data
-    useEffect(()=> {
+    useEffect(() => {
         if (searchTerm.length > 1) {
             getAnimalsBySearchTerm(searchTerm).then((animalsData) => setAnimals(animalsData))
         } else {
@@ -27,7 +27,7 @@ export const AnimalList = () => {
     return (
         <>
             <AnimalSearch onSearchTermChange={onSearchTermChange} searchTerm={searchTerm} />
-            <div style={{ marginTop: "2rem"}}>
+            <div style={{ marginTop: "2rem" }}>
                 <button onClick={() => history.push("/animals/create")}>
                     Make Reservation
                 </button>

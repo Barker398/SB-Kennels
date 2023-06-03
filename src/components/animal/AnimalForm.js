@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom'
 
 export const AnimalForm = () => {
     // Use the required context providers for data
-    const [ locations, setLocations ] = useState([])
+    const [locations, setLocations] = useState([])
     const { animalId } = useParams()
     // Component state
     const [animal, setAnimal] = useState({})
