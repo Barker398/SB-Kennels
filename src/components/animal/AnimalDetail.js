@@ -8,7 +8,7 @@ export const AnimalDetails = () => {
     const [animal, setAnimal] = useState({ location: {}, customer: {} })
     const { animalId } = useParams()
     const history = useHistory()
-    
+
     useEffect(() => {
         getAnimalById(animalId)
             .then(setAnimal)
